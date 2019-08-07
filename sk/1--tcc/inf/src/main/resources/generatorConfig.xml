@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+		"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- 设置mysql驱动路径 -->
+	<!-- 此处指定生成针对MyBatis3的DAO -->
+	<context id="context" targetRuntime="MyBatis3">
+		<!-- 分页插件
+		<plugin type="mybatis.generator.plugin.oracle.PaginationPlugin" />
+		<plugin type="mybatis.generator.plugin.InsertBatchPlugin" />
+		<plugin type="mybatis.generator.plugin.AnnotationPlugin" />-->
+		<!-- 生成中文注释 -->
+		<commentGenerator>
+			<property name="javaFileEncoding" value="UTF-8"/>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<!--
+		<commentGenerator>
+			<property name="suppressAllComments" value="true"/>
+		</commentGenerator>-->
+		<!-- jdbc连接信息 -->
+		<jdbcConnection driverClass="oracle.jdbc.OracleDriver" connectionURL="jdbc:oracle:thin:@192.168.1.254:1521:orcl" userId="kkpk" password="kkpk"/>
+		<javaTypeResolver >
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!-- 生成vo对象(*.java)及生成用于查询的Example对象(*Example.java) -->
+		<javaModelGenerator targetPackage="com.jemmyee.inf.entity" targetProject="src\main\java"/>
+		<!-- dao配置文件 (*Mapper.xml) -->
+		<!--<sqlMapGenerator targetPackage="mappers" targetProject="src\main\resources"/>-->
+		<sqlMapGenerator targetPackage="com.jemmyee.inf.mapper" targetProject="src\main\java"/>
+		<!-- 生成DAO的类文件 (*Mapper.java) -->
+		<!--<javaClientGenerator targetPackage="com.jemmyee.core.dao" targetProject="src\main\java" type="xmlmapper"/>-->
+		<!-- 想要生成的数据库表,自动化工具会根据该表的结构生成相应的po对象 -->
+		<!--<table catalog="" schema="" tableName="b_veh_user" domainObjectName="VehUser"
+              enableInsert="false"
+              enableDeleteByPrimaryKey="false"
+              enableDeleteByExample="false"
+              enableUpdateByPrimaryKey="false"
+              enableUpdateByExample="false"
+              enableCountByExample="false"
+              enableSelectByPrimaryKey="true"
+              enableSelectByExample="true"></table>-->
+
+		<table catalog="" schema="" tableName="inf_parkinfo" domainObjectName="ParkInfo" enableInsert="true"
+			   enableDeleteByPrimaryKey="true"
+			   enableDeleteByExample="false"
+			   enableUpdateByPrimaryKey="true"
+			   enableUpdateByExample="false"
+			   enableCountByExample="true"
+			   enableSelectByPrimaryKey="true"
+			   enableSelectByExample="true"></table>
+	</context>
+</generatorConfiguration>

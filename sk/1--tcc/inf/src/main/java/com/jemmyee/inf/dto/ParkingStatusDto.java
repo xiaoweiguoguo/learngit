@@ -1,0 +1,879 @@
+package com.jemmyee.inf.dto;
+
+import io.swagger.annotations.ApiModelProperty;
+
+import java.math.BigDecimal;
+
+public class ParkingStatusDto {
+    /**
+     * 停车记录标识
+     * INF_PARKING.ID
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "停车记录标识",required = true)
+    private String id;
+
+    /**
+     * 停车场编号
+     * INF_PARKING.PARKCODE
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "停车场编号",required = true)
+    private String parkcode;
+
+    /**
+     * 停车平台编号
+     * INF_PARKING.COMPANYCODE
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "停车平台编号",required = true)
+    private String companycode;
+
+    /**
+     * 车牌号
+     * INF_PARKING.PLATE
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "车牌号码",required = true)
+    private String plate;
+
+    /**
+     * 车牌颜色 0-蓝 1-黄 2-白 3-黑
+     * INF_PARKING.PLATECOLOR
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "车牌颜色（0-蓝 1-黄 2-白 3-黑）",required = true)
+    private Short platecolor;
+
+    /**
+     * T1-大型车，2-小型车，3-其他
+     * INF_PARKING.VEHICLETYPE
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "车辆类型 （1-大型车，2-小型车，3-其他）")
+    private Short vehicletype;
+
+    /**
+     * 0-自有路外停车场 1-路内泊位 2-第三方停车场
+     * INF_PARKING.PARKTYPE
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "停车场类型 0-自有路外停车场 1-路内泊位 2-第三方停车场",required = true)
+    private Short parktype;
+
+    /**
+     * 泊位号
+     * INF_PARKING.BERTHCODE
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "泊位号")
+    private String berthcode;
+
+    /**
+     * 进场时间
+     * INF_PARKING.INTIME
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "进场时间",required = true)
+    private String intime;
+
+    /**
+     * 出场时间
+     * INF_PARKING.OUTTIME
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "出场时间")
+    private String outtime;
+
+    /**
+     * 0-未缴 1-已缴
+     * INF_PARKING.PAYSTATUS
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "状态 0-未缴 1-已缴",required = true)
+    private Short paystatus;
+
+    /**
+     * 实缴金额
+     * INF_PARKING.REALPAYCASH
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "实缴金额")
+    private BigDecimal realpaycash;
+
+    /**
+     * 应缴金额
+     * INF_PARKING.MUSTPAYCASH
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "应缴金额")
+    private BigDecimal mustpaycash;
+
+    /**
+     * 0-现金 1-在线支付
+     * INF_PARKING.PAYTYPE
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "支付方式 0-现金 1-在线支付")
+    private Short paytype;
+
+
+
+    /**
+     * 车辆进图片
+     * INF_PARKING.VEHICLEPICIN
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "车辆进图片")
+    private String vehiclepicin;
+
+    /**
+     * 车辆出图片
+     * INF_PARKING.VEHICLEPICOUT
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "车辆出图片")
+    private String vehiclepicout;
+
+    /**
+     * 0-否 1-是
+     * INF_PARKING.ISPLATFORMUSER
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "是否平台用户 0-否 1-是")
+    private Short isplatformuser;
+
+    /**
+     * 平台用户信息
+     * INF_PARKING.PLATFORMUSERINFO
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "平台用户信息")
+    private String platformuserinfo;
+
+    /**
+     * 0-未申请 1-已申请 2-已扣费 3-扣费失败
+     * INF_PARKING.APPAPPLYSTATUS
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "app申请状态 0-未申请 1-已申请 2-已扣费 3-扣费失败")
+    private BigDecimal appapplystatus;
+
+    /**
+     * app申请时间
+     * INF_PARKING.APPAPPLYTIME
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "app申请时间")
+    private String appapplytime;
+
+    /**
+     * app扣费时间
+     * INF_PARKING.APPFEETIME
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "app扣费时间")
+    private String appfeetime;
+
+    /**
+     * app申请扣费金额
+     * INF_PARKING.APPAPPLYFEE
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "app申请扣费金额")
+    private BigDecimal appapplyfee;
+
+    /**
+     * app实际扣费金额
+     * INF_PARKING.APPREALFEE
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "app实际扣费金额")
+    private BigDecimal apprealfee;
+
+    /**
+     * 支付平台编号
+     * INF_PARKING.APPPAYPLATFORM
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "支付平台编号")
+    private String apppayplatform;
+
+    /**
+     * app申请扣费流水号
+     * INF_PARKING.APPAPPLYORDER
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "app申请扣费流水号")
+    private String appapplyorder;
+
+    /**
+     * 平台扣费流水号
+     * INF_PARKING.PLATFORMFEEORDER
+     *
+     * @mbggenerated
+     */
+    @ApiModelProperty(value = "平台扣费流水号")
+    private String platformfeeorder;
+
+    @ApiModelProperty(value = "车辆类型 0.临时车1.内部车2.会员车 ")
+    private Short cartype;
+
+    public Short getCartype() {
+        return cartype;
+    }
+
+    public void setCartype(Short cartype) {
+        this.cartype = cartype;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.ID
+     *
+     * @return the value of INF_PARKING.ID
+     *
+     * @mbggenerated
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.ID
+     *
+     * @param id the value for INF_PARKING.ID
+     *
+     * @mbggenerated
+     */
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.PARKCODE
+     *
+     * @return the value of INF_PARKING.PARKCODE
+     *
+     * @mbggenerated
+     */
+    public String getParkcode() {
+        return parkcode;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.PARKCODE
+     *
+     * @param parkcode the value for INF_PARKING.PARKCODE
+     *
+     * @mbggenerated
+     */
+    public void setParkcode(String parkcode) {
+        this.parkcode = parkcode;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.COMPANYCODE
+     *
+     * @return the value of INF_PARKING.COMPANYCODE
+     *
+     * @mbggenerated
+     */
+    public String getCompanycode() {
+        return companycode;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.COMPANYCODE
+     *
+     * @param companycode the value for INF_PARKING.COMPANYCODE
+     *
+     * @mbggenerated
+     */
+    public void setCompanycode(String companycode) {
+        this.companycode = companycode;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.PLATE
+     *
+     * @return the value of INF_PARKING.PLATE
+     *
+     * @mbggenerated
+     */
+    public String getPlate() {
+        return plate;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.PLATE
+     *
+     * @param plate the value for INF_PARKING.PLATE
+     *
+     * @mbggenerated
+     */
+    public void setPlate(String plate) {
+        this.plate = plate;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.PLATECOLOR
+     *
+     * @return the value of INF_PARKING.PLATECOLOR
+     *
+     * @mbggenerated
+     */
+    public Short getPlatecolor() {
+        return platecolor;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.PLATECOLOR
+     *
+     * @param platecolor the value for INF_PARKING.PLATECOLOR
+     *
+     * @mbggenerated
+     */
+    public void setPlatecolor(Short platecolor) {
+        this.platecolor = platecolor;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.VEHICLETYPE
+     *
+     * @return the value of INF_PARKING.VEHICLETYPE
+     *
+     * @mbggenerated
+     */
+    public Short getVehicletype() {
+        return vehicletype;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.VEHICLETYPE
+     *
+     * @param vehicletype the value for INF_PARKING.VEHICLETYPE
+     *
+     * @mbggenerated
+     */
+    public void setVehicletype(Short vehicletype) {
+        this.vehicletype = vehicletype;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.PARKTYPE
+     *
+     * @return the value of INF_PARKING.PARKTYPE
+     *
+     * @mbggenerated
+     */
+    public Short getParktype() {
+        return parktype;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.PARKTYPE
+     *
+     * @param parktype the value for INF_PARKING.PARKTYPE
+     *
+     * @mbggenerated
+     */
+    public void setParktype(Short parktype) {
+        this.parktype = parktype;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.BERTHCODE
+     *
+     * @return the value of INF_PARKING.BERTHCODE
+     *
+     * @mbggenerated
+     */
+    public String getBerthcode() {
+        return berthcode;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.BERTHCODE
+     *
+     * @param berthcode the value for INF_PARKING.BERTHCODE
+     *
+     * @mbggenerated
+     */
+    public void setBerthcode(String berthcode) {
+        this.berthcode = berthcode;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.INTIME
+     *
+     * @return the value of INF_PARKING.INTIME
+     *
+     * @mbggenerated
+     */
+    public String getIntime() {
+        return intime;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.INTIME
+     *
+     * @param intime the value for INF_PARKING.INTIME
+     *
+     * @mbggenerated
+     */
+    public void setIntime(String intime) {
+        this.intime = intime;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.OUTTIME
+     *
+     * @return the value of INF_PARKING.OUTTIME
+     *
+     * @mbggenerated
+     */
+    public String getOuttime() {
+        return outtime;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.OUTTIME
+     *
+     * @param outtime the value for INF_PARKING.OUTTIME
+     *
+     * @mbggenerated
+     */
+    public void setOuttime(String outtime) {
+        this.outtime = outtime;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.PAYSTATUS
+     *
+     * @return the value of INF_PARKING.PAYSTATUS
+     *
+     * @mbggenerated
+     */
+    public Short getPaystatus() {
+        return paystatus;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.PAYSTATUS
+     *
+     * @param paystatus the value for INF_PARKING.PAYSTATUS
+     *
+     * @mbggenerated
+     */
+    public void setPaystatus(Short paystatus) {
+        this.paystatus = paystatus;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.REALPAYCASH
+     *
+     * @return the value of INF_PARKING.REALPAYCASH
+     *
+     * @mbggenerated
+     */
+    public BigDecimal getRealpaycash() {
+        return realpaycash;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.REALPAYCASH
+     *
+     * @param realpaycash the value for INF_PARKING.REALPAYCASH
+     *
+     * @mbggenerated
+     */
+    public void setRealpaycash(BigDecimal realpaycash) {
+        this.realpaycash = realpaycash;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.MUSTPAYCASH
+     *
+     * @return the value of INF_PARKING.MUSTPAYCASH
+     *
+     * @mbggenerated
+     */
+    public BigDecimal getMustpaycash() {
+        return mustpaycash;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.MUSTPAYCASH
+     *
+     * @param mustpaycash the value for INF_PARKING.MUSTPAYCASH
+     *
+     * @mbggenerated
+     */
+    public void setMustpaycash(BigDecimal mustpaycash) {
+        this.mustpaycash = mustpaycash;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.PAYTYPE
+     *
+     * @return the value of INF_PARKING.PAYTYPE
+     *
+     * @mbggenerated
+     */
+    public Short getPaytype() {
+        return paytype;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.PAYTYPE
+     *
+     * @param paytype the value for INF_PARKING.PAYTYPE
+     *
+     * @mbggenerated
+     */
+    public void setPaytype(Short paytype) {
+        this.paytype = paytype;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.VEHICLEPICIN
+     *
+     * @return the value of INF_PARKING.VEHICLEPICIN
+     *
+     * @mbggenerated
+     */
+    public String getVehiclepicin() {
+        return vehiclepicin;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.VEHICLEPICIN
+     *
+     * @param vehiclepicin the value for INF_PARKING.VEHICLEPICIN
+     *
+     * @mbggenerated
+     */
+    public void setVehiclepicin(String vehiclepicin) {
+        this.vehiclepicin = vehiclepicin;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.VEHICLEPICOUT
+     *
+     * @return the value of INF_PARKING.VEHICLEPICOUT
+     *
+     * @mbggenerated
+     */
+    public String getVehiclepicout() {
+        return vehiclepicout;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.VEHICLEPICOUT
+     *
+     * @param vehiclepicout the value for INF_PARKING.VEHICLEPICOUT
+     *
+     * @mbggenerated
+     */
+    public void setVehiclepicout(String vehiclepicout) {
+        this.vehiclepicout = vehiclepicout;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.ISPLATFORMUSER
+     *
+     * @return the value of INF_PARKING.ISPLATFORMUSER
+     *
+     * @mbggenerated
+     */
+    public Short getIsplatformuser() {
+        return isplatformuser;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.ISPLATFORMUSER
+     *
+     * @param isplatformuser the value for INF_PARKING.ISPLATFORMUSER
+     *
+     * @mbggenerated
+     */
+    public void setIsplatformuser(Short isplatformuser) {
+        this.isplatformuser = isplatformuser;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.PLATFORMUSERINFO
+     *
+     * @return the value of INF_PARKING.PLATFORMUSERINFO
+     *
+     * @mbggenerated
+     */
+    public String getPlatformuserinfo() {
+        return platformuserinfo;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.PLATFORMUSERINFO
+     *
+     * @param platformuserinfo the value for INF_PARKING.PLATFORMUSERINFO
+     *
+     * @mbggenerated
+     */
+    public void setPlatformuserinfo(String platformuserinfo) {
+        this.platformuserinfo = platformuserinfo;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.APPAPPLYSTATUS
+     *
+     * @return the value of INF_PARKING.APPAPPLYSTATUS
+     *
+     * @mbggenerated
+     */
+    public BigDecimal getAppapplystatus() {
+        return appapplystatus;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.APPAPPLYSTATUS
+     *
+     * @param appapplystatus the value for INF_PARKING.APPAPPLYSTATUS
+     *
+     * @mbggenerated
+     */
+    public void setAppapplystatus(BigDecimal appapplystatus) {
+        this.appapplystatus = appapplystatus;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.APPAPPLYTIME
+     *
+     * @return the value of INF_PARKING.APPAPPLYTIME
+     *
+     * @mbggenerated
+     */
+    public String getAppapplytime() {
+        return appapplytime;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.APPAPPLYTIME
+     *
+     * @param appapplytime the value for INF_PARKING.APPAPPLYTIME
+     *
+     * @mbggenerated
+     */
+    public void setAppapplytime(String appapplytime) {
+        this.appapplytime = appapplytime;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.APPFEETIME
+     *
+     * @return the value of INF_PARKING.APPFEETIME
+     *
+     * @mbggenerated
+     */
+    public String getAppfeetime() {
+        return appfeetime;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.APPFEETIME
+     *
+     * @param appfeetime the value for INF_PARKING.APPFEETIME
+     *
+     * @mbggenerated
+     */
+    public void setAppfeetime(String appfeetime) {
+        this.appfeetime = appfeetime;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.APPAPPLYFEE
+     *
+     * @return the value of INF_PARKING.APPAPPLYFEE
+     *
+     * @mbggenerated
+     */
+    public BigDecimal getAppapplyfee() {
+        return appapplyfee;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.APPAPPLYFEE
+     *
+     * @param appapplyfee the value for INF_PARKING.APPAPPLYFEE
+     *
+     * @mbggenerated
+     */
+    public void setAppapplyfee(BigDecimal appapplyfee) {
+        this.appapplyfee = appapplyfee;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.APPREALFEE
+     *
+     * @return the value of INF_PARKING.APPREALFEE
+     *
+     * @mbggenerated
+     */
+    public BigDecimal getApprealfee() {
+        return apprealfee;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.APPREALFEE
+     *
+     * @param apprealfee the value for INF_PARKING.APPREALFEE
+     *
+     * @mbggenerated
+     */
+    public void setApprealfee(BigDecimal apprealfee) {
+        this.apprealfee = apprealfee;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.APPPAYPLATFORM
+     *
+     * @return the value of INF_PARKING.APPPAYPLATFORM
+     *
+     * @mbggenerated
+     */
+    public String getApppayplatform() {
+        return apppayplatform;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.APPPAYPLATFORM
+     *
+     * @param apppayplatform the value for INF_PARKING.APPPAYPLATFORM
+     *
+     * @mbggenerated
+     */
+    public void setApppayplatform(String apppayplatform) {
+        this.apppayplatform = apppayplatform;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.APPAPPLYORDER
+     *
+     * @return the value of INF_PARKING.APPAPPLYORDER
+     *
+     * @mbggenerated
+     */
+    public String getAppapplyorder() {
+        return appapplyorder;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.APPAPPLYORDER
+     *
+     * @param appapplyorder the value for INF_PARKING.APPAPPLYORDER
+     *
+     * @mbggenerated
+     */
+    public void setAppapplyorder(String appapplyorder) {
+        this.appapplyorder = appapplyorder;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method returns the value of the database column INF_PARKING.PLATFORMFEEORDER
+     *
+     * @return the value of INF_PARKING.PLATFORMFEEORDER
+     *
+     * @mbggenerated
+     */
+    public String getPlatformfeeorder() {
+        return platformfeeorder;
+    }
+
+    /**
+     * This method was generated by MyBatis Generator.
+     * This method sets the value of the database column INF_PARKING.PLATFORMFEEORDER
+     *
+     * @param platformfeeorder the value for INF_PARKING.PLATFORMFEEORDER
+     *
+     * @mbggenerated
+     */
+    public void setPlatformfeeorder(String platformfeeorder) {
+        this.platformfeeorder = platformfeeorder;
+    }
+
+}
